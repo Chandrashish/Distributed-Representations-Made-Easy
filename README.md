@@ -5,4 +5,4 @@ Distributed Representations (DR) play a significant role in machine learning. DR
 
 * Although Word2Vec model provides us with good results, we have also attempted at getting word-embeddings by building a DNN and training it on the [Large Movie Review Dataset](https://aclanthology.org/P11-1015/) to achieve a certain acceptable value of accuracy (above 80%) by choosing a task of sentiment classification. We have achieved this with the help of Embedding module in Keras library. The sentiment classification task involved classifiying a movie reiview as a positive or negative review. Another interesting task that can be tried for getting the word-embeddings is word prediction by using sequential networks (like LSTM/GRU).
 
-* You can find the data here{https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz}.
+* You can find the data [here](https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz).
