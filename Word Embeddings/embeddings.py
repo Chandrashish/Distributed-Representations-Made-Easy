@@ -48,17 +48,14 @@ val_ds = tf.keras.preprocessing.text_dataset_from_directory(
     'aclImdb/train', batch_size=batch_size, validation_split=0.2,
     subset='validation', seed=seed)
 
-"""### Configure the dataset for performance
-
-
-"""
+"""Configure the dataset for performance."""
 
 AUTOTUNE = tf.data.AUTOTUNE
 
 train_ds = train_ds.cache().prefetch(buffer_size=AUTOTUNE)
 val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 
-"""## Text preprocessing"""
+"""Text preprocessing"""
 
 def custom_standardization(input_data):
   lowercase = tf.strings.lower(input_data)
@@ -90,7 +87,7 @@ model = Sequential([
   Dense(1)                                  
 ])
 
-"""## Compile and train the model"""
+"""Compile and train the model"""
 
 model.compile(optimizer='adam',
               loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
@@ -128,7 +125,7 @@ for index, word in enumerate(vocab):
 out_v.close()
 out_m.close()
 
-"""If you are running this tutorial in Colaboratory, you can use the following snippet to download these files to your local machine (or use the file browser, View -> Table of contents -> File browser)."""
+"""If you are running this tutorial in Colaboratory, you can use the following code snippet to download these files to your local machine (or use the file browser, View -> Table of contents -> File browser)."""
 
 try:
   from google.colab import files
@@ -137,11 +134,11 @@ try:
 except Exception:
   pass
 
-"""## Visualize the embeddings
+"""Visualize the embeddings
 
 To visualize the embeddings, upload them to the embedding projector.
 
-Open the [Embedding Projector](http://projector.tensorflow.org/) 
+Open the Embedding Projector (http://projector.tensorflow.org/) 
 
 * Click on "Load data".
 
